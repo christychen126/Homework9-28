@@ -2,6 +2,14 @@ melon_cost = 1  # set melon_cost
 
 
 def check_underpaid_customer(customer_order_data):
+    """ Check underpay or overpay customer
+
+        Open customer order data. Break each line into a list of words. 
+        Assign the words to different variables (Customer's name, the amount of melon bought, 
+        the amout paid). Calculate the expected pay and Compare it to actual pay.
+        If actual pay > expected pay, print out overpay warning.
+        If expected pay > actual pay, print out underpay warning. 
+        """
     customer_order = open(customer_order_data)   # oepn a file
     for line in customer_order:
         line.rstrip()   # take out white spaces at the right
